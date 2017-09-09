@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>stat wise print in jsin object method</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+    let underscore = require('underscore');
+    var person = {
+        "permittedCountries": [{
+                "employeeId": "1",
+                "employeeAddress": {
+                    "city": "Bangalore",
+                    "state": "Karnataka"
+                }
+            },
+            {
+                "employeeId": "2",
+                "employeeAddress": {
+                    "city": "Chennai",
+                    "state": "TamilNadu"
+                }
+            },
+            {
+                "employeeId": "4",
+                "employeeAddress": {
+                    "city": "Bangalore",
+                    "state": "Karnataka"
+                }
+            },
+            {
+                "employeeId": "5",
+                "employeeAddress": {
+                    "city": "Chennai",
+                    "state": "TamilNadu"
+                }
+            }
+        ]
+    }
+    var countries = person.permittedCountries;
+    let state = _.sortBy(countries, x=>x.employeeAddress.state);
+    state.reverse();
+    console.log(state);
+    document.getElementById("demo").innerHTML = state;
+    </script>
+</body>
+
+</html>

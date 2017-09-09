@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Loopin through an array using a for loop:</p>
+    <p id="demo"></p>
+    <script>
+    var myObj, i, x = "";
+    myObj = {
+        "person": [
+
+
+            { "name": "abi", "age": "25", "sex": "male" },
+            { "name": "yuva", "age": "24", "sex": "male" },
+            { "name": "babu", "age": "23", "sex": "male" }
+        ]
+
+    };
+
+    for (i in myObj.person) {
+        x += "name:" + myObj.person[i].name + " , " + "age:" + myObj.person[i].age + " , " + "sex:" + myObj.person[i].sex + "<br>";
+
+
+    }
+    document.getElementById("demo").innerHTML = x;
+    </script>
+    
+</body>
+
+</html>

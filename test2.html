@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>test</title>
+</head>
+
+<body>
+    <p id="real"></p>
+    <script>
+    var x = "";
+    var person = {
+        "persondetalis": {
+            "name": "ajith",
+            "age": "21",
+            "id": "4021"
+        }
+    }
+    for (i in person.persondetalis) {
+        x += i + ' : ' + person.persondetalis[i] + "<br>";
+    }
+    document.getElementById("real").innerHTML = x;
+    </script>
+</body>
+
+</html>
